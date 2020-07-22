@@ -22,7 +22,7 @@ Getting Started
 
 In the root folder there is an index.html file that contains links to all resources. You can view the documentation online on the [Github pages branch](https://jgraph.github.io/mxgraph/). The key resources are the JavaScript user manual, the JavaScript examples and the JavaScript API specificiation.
 
-a
+https://jb-liaw.github.io/mxgraph/javascript/examples/grapheditor/www/index.html
 
 Support
 =======
