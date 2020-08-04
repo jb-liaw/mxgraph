@@ -86,6 +86,7 @@ Sidebar.prototype.init = function()
 	this.addMiscPalette(false);
 	this.addAdvancedPalette(false);
 	this.addBasicPalette(dir);
+	this.addCustomPalette(dir);
 	this.addStencilPalette('arrows', mxResources.get('arrows'), dir + '/arrows.xml',
 		';whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2');
 	this.addUmlPalette(false);
@@ -1046,6 +1047,21 @@ Sidebar.prototype.addBasicPalette = function(dir)
 			this.createVertexTemplateEntry('shape=partialRectangle;whiteSpace=wrap;html=1;right=0;top=0;bottom=0;fillColor=none;routingCenterX=-0.5;', 120, 60, '', 'Partial Rectangle'),
 			this.createVertexTemplateEntry('shape=partialRectangle;whiteSpace=wrap;html=1;bottom=0;right=0;fillColor=none;', 120, 60, '', 'Partial Rectangle'),
 			this.createVertexTemplateEntry('shape=partialRectangle;whiteSpace=wrap;html=1;top=0;left=0;fillColor=none;', 120, 60, '', 'Partial Rectangle')
+	]);
+};
+
+Sidebar.prototype.addCustomPalette = function(dir)
+{
+	this.addStencilPalette('basic', mxResources.get('basic'), dir + '/basic.xml',
+		';whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2',
+		null, null, null, null, [
+			this.createVertexTemplateEntry('shape=ext;rounded=1;html=1;whiteSpace=wrap;', 120, 60, '', 'Task'),
+			this.createVertexTemplateEntry('ellipse;whiteSpace=wrap;html=1;aspect=fixed;', 120, 60, '', 'Start/End'),
+			this.createVertexTemplateEntry('rhombus;whiteSpace=wrap;html=1;', 120, 60, '', 'Condition'),
+			this.createVertexTemplateEntry('swimlane;html=1;horizontal=0;startSize=30;fontSize=20;', 120, 60, '', 'Pool'),
+			this.createVertexTemplateEntry('swimlane;startSize=20;', 120, 60, '', 'Lane'),
+			this.createVertexTemplateEntry('swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;', 120, 60, '', 'Pool Horizontal'),
+			this.createVertexTemplateEntry('swimlane;startSize=20;horizontal=0;', 120, 60, '', 'Lane Horizontal'),
 	]);
 };
 
